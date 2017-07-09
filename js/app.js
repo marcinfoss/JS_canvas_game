@@ -125,6 +125,9 @@ function handleInput(dt) {
         var x = player.pos[0] + player.sprite.size[0] / 2;
         var y = player.pos[1] + player.sprite.size[1] / 2;
 
+		//play shoot sound
+		document.getElementById('shoot').play();
+		
         bullets.push({ pos: [x, y],
                        dir: 'forward',
                        sprite: new Sprite('img/sprites.png', [0, 39], [10, 8]) });
@@ -152,6 +155,10 @@ function nuke(){
 
 	nukes--;
 
+	//play sound explosion
+		document.getElementById('bomb').play();
+
+		
 	// Run collision detection for all enemies and destroy them!
     for(var i=0; i<enemies.length; i++) {
         var pos = enemies[i].pos;
