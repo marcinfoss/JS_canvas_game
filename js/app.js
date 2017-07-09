@@ -126,7 +126,7 @@ function handleInput(dt) {
         var y = player.pos[1] + player.sprite.size[1] / 2;
 
 		//play shoot sound
-		document.getElementById('shoot').play();
+		var s = new Sound().play('sound/laser.mp3');
 		
         bullets.push({ pos: [x, y],
                        dir: 'forward',
@@ -156,7 +156,7 @@ function nuke(){
 	nukes--;
 
 	//play sound explosion
-		document.getElementById('bomb').play();
+		var s = new Sound().play('sound/explosion.mp3');
 
 		
 	// Run collision detection for all enemies and destroy them!
@@ -261,7 +261,7 @@ function checkCollisions() {
                 // Remove the enemy
                 enemies.splice(i, 1);
                 i--;
-
+				var s = new Sound().play('sound/enemy_boom.mp3');
                 // Add score
                 score += 100;
 
