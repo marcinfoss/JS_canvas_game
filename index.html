@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+
+    <link rel="stylesheet" href="css/app.css">
+  </head>
+  <body>
+    <div id="game-over-overlay">
+    </div>
+
+    <div id="game-over">
+      <h1>TO KONIEC</h1>
+      <button id="play-again">Jeszcze raz!</button>
+    </div>
+
+    <div class="wrapper">
+      <div id="instructions">
+        <div>
+          Ruch: <span class="key">strzałki</span> lub <span class="key">wasd</span>
+        </div>
+        <div>
+          Strzał: <span class="key">spacja</span>
+        </div>
+		<div>
+          Bomba: <span class="key">r</span>
+        </div>
+      </div>
+	  <div id="stats">
+		<div id="score"></div>
+		<div id="nukes"></div>
+	  </div>
+    </div>
+
+    <script type="text/javascript" src="js/resources.js"></script>
+    <script type="text/javascript" src="js/input.js"></script>
+    <script type="text/javascript" src="js/sprite.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
+  </body>
+</html>
