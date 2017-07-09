@@ -125,6 +125,9 @@ function handleInput(dt) {
         var x = player.pos[0] + player.sprite.size[0] / 2;
         var y = player.pos[1] + player.sprite.size[1] / 2;
 
+		//play shoot sound
+		var s = new Sound().play('sound/laser.mp3');
+		
         bullets.push({ pos: [x, y],
                        dir: 'forward',
                        sprite: new Sprite('img/sprites.png', [0, 39], [10, 8]) });
@@ -152,6 +155,10 @@ function nuke(){
 
 	nukes--;
 
+	//play sound explosion
+		var s = new Sound().play('sound/explosion.mp3');
+
+		
 	// Run collision detection for all enemies and destroy them!
     for(var i=0; i<enemies.length; i++) {
         var pos = enemies[i].pos;
@@ -254,7 +261,7 @@ function checkCollisions() {
                 // Remove the enemy
                 enemies.splice(i, 1);
                 i--;
-
+				var s = new Sound().play('sound/enemy_boom.mp3');
                 // Add score
                 score += 100;
 
